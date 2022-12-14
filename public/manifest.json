@@ -1,0 +1,24 @@
+{
+	"name": "bullsea.io",
+	"description": "작은 불씨에서 시작된다",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"icons": {
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.upbit.com/*", "*://*.bithumb.com/*"],
+			"js": ["main.js"]
+		}
+	],
+	"action": {
+		"default_popup": "index.html"
+	}
+}
